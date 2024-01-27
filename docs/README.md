@@ -1,5 +1,11 @@
 # HTTP Docs
 
+## List of Status Codes Used
+
+- 200 - Success
+- 400 - Bad Request
+- 500 - Internal Server Error
+
 ## Request
 
 The format for making a [HTTP POST Request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) will be the following:
