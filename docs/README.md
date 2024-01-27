@@ -21,16 +21,18 @@ When the request is successful, the following will be returned:
 {
   "status": "success",
   "data": {
-    "doorOpened":  random(1, 3) == 1 ? "door1" : "door2"
+    "message":  "door1" OR "door2"
   }
 }
 ```
 
-When the request is unsuccessful due to an error or anything else, the following will be returned:
+When the request is unsuccessful due to an error, the following will be returned:
 
 ```json
 {
   "status": "error",
-  "message": "Error description"
+  "data": {
+    "message": "Error description"
+  }
 }
 ```
