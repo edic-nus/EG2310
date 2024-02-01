@@ -31,9 +31,9 @@ std::map<std::string, std::string> readCredentials(const std::string& filename) 
 
 auto credentials = readCredentials("../.user");
 
-// change ssid and password
-String ssid = String(credentials["SSID"].c_str());
-String password = String(credentials["PASSWORD"].c_str());
+// Read ssid and password
+const char* ssid = credentials["SSID"].c_str();
+const char* password = credentials["PASSWORD"].c_str();
 
 // Create a web server on port 80
 WebServer server(80);
