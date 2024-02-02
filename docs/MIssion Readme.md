@@ -49,12 +49,12 @@ The teams are to submit a user manual of not more than 5 pages for inspection be
 ## Scoring
 Scoring is spilt into mission achievement based scoring, and time based competative scoring. 
 
-# Mission Achievement Based scoring
+### Mission Achievement Based scoring
 For each mission, teams can score up to 100 points. Refer to the Scoring Form (Appendix 1). 
 After all teams have completed the missions, they will be ranked based on the time required to setup the material and finish the missions. 
 The final score will be the best score of the multiple attempts (i.e., points from each mission and points from the time ranking). 
 
-# Time based competative scoring
+### Time based competative scoring
 Teams will be timed based on
 - Time taken to deposit ping pong ball into the bucket. Timing will be taken once the first ping pong ball lands and remain in the bucket.
 - Map closure. Timing will be taken once TA Verify full map closure.
@@ -71,15 +71,17 @@ The team starts the mission and takes 7 minutes to develop a complete map of the
 
 No timing is recorded if milestones are not achieved.  
 
-## ROBOT REQUIREMENTS 
+# ROBOT REQUIREMENTS 
 
 You are free to experiment and test any system that can complete the mission.
 
-### The Robot
+## The Robot
 The robot platform must be a Turtlebot 3 Burger. No other requirement for the robot. 
 
-### The Markers
+## The Markers
 The team is allowed to place temporary markers or beacons in the map to help the robot complete the mission. These markers must be installed and removed within the 25-minute time that the team have for the mission. There is no additional time given for removal of map markers.
+
+--End--
 
 
 
