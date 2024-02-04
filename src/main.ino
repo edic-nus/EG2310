@@ -1,42 +1,16 @@
-#include <Arduino.h>
-
 #include <WiFi.h>
 #include <WebServer.h>
-#include <ArduinoJson.h>
+#include "ArduinoJson.h"
 
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <map>
-#include <string>
-
-std::map<std::string, std::string> readCredentials(const std::string& filename) {
-    std::map<std::string, std::string> credentials;
-    std::ifstream file(filename);
-    std::string line;
-
-    while (std::getline(file, line)) {
-        std::istringstream is_line(line);
-        std::string key;
-        if (std::getline(is_line, key, '=')) {
-            std::string value;
-            if (std::getline(is_line, value)) {
-                credentials[key] = value;
-            }
-        }
-    }
-
-    return credentials;
-}
-
-auto credentials = readCredentials("../.user");
-
-// Read ssid and password
-const char* ssid = credentials["SSID"].c_str();
-const char* password = credentials["PASSWORD"].c_str();
+// Replace with your network credentials
+const char* ssid = "";
+const char* password = "";
 
 // Create a web server on port 80
 WebServer server(80);
+
+// timeout variable
+int successfulRequestCount = 0;
 
 // Assign output variables to GPIO pins
 const int output16 = 16;
@@ -53,7 +27,7 @@ void handleOpenDoor(String doorToOpen) {
 void handleRequest() {
   if (server.hasArg("plain") == false) {
     // If the request does not have a body
-    server.send(400, "application/json", "{\"status\":\"error\",\"message\":\"Bad Request - No Data Received\"}");
+    server.send(400, "application/json", "{\n\t\"status\":\"error\",\n\t\"message\":\"Bad Request - No Data Received\"\n}\n");
     return;
   }
 
@@ -65,6 +39,17 @@ void handleRequest() {
 
   // Check the action value
   if (action == "openDoor") {
+    
+    // Reject request if too many http requests are sent at once
+    if (successfulRequestCount >= 2) {
+      server.send(400, "application/json", "{\n\t\"status\":\"error\",\n\t\"message\":\"Too many requests, try again later\"\n}\n");
+      delay(20000);   // delay for 20 seconds
+      successfulRequestCount = 0;
+      return;
+    }
+
+    successfulRequestCount += 1;
+
     // Randomly decide which door to open
     String doorToOpen = random(1, 3) == 1 ? "door1" : "door2";
 
@@ -72,12 +57,12 @@ void handleRequest() {
     handleOpenDoor(doorToOpen);
 
     // Send response back to TurtleBot3
-    String response = "{\"status\":\"success\",\"data\":{\"message\":\"" + doorToOpen + "\"}}";
+    String response = "{\n\t\"status\":\"success\",\n\t\"data\":{\n\t\t\"message\":\"" + doorToOpen + "\"\n\t}\n}\n";
     server.send(200, "application/json", response);
 
     Serial.println("Command received to open " + doorToOpen);
   } else {
-    server.send(400, "application/json", "{\"status\":\"error\",\"data\":{\"message\":\"Invalid Action\"}}");
+    server.send(400, "application/json", "{\n\t\"status\":\"error\",\n\t\"data\":{\n\t\t\"message\":\"Invalid Action\"\n\t}\n}\n");
   }
 }
 
