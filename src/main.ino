@@ -19,7 +19,9 @@ const int output17 = 17;
 void handleOpenDoor(String doorToOpen) {
   if (doorToOpen == "door1") {
     digitalWrite(output16, HIGH);
+    digitalWrite(output17, LOW);
   } else {
+    digitalWrite(output16, LOW);
     digitalWrite(output17, HIGH);
   }
 }
