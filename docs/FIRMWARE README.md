@@ -2,6 +2,10 @@
 Download the Arduino IDE.
 
 ### Using the Arduino IDE:
+
+Follow this tutorial 
+https://randomnerdtutorials.com/installing-esp32-arduino-ide-2-0/
+
 1. Open the IDE and copy the code from main.ino (located in src/ in this repository) into a new .ino file
 2. Open the "Library Manager" tab and download the libraries: Arduino Uno Wifi Dev Ed Library, ArduinoJson
 3. Select the board FireBeetle-ESP32 or ESP32 Wrover Kit (all versions)
