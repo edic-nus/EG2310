@@ -27,7 +27,10 @@ Finally, the team will declare to start the mission.
 ### 2. THE MISSION 
 The mission will consist of 3 phases, a start zone, a randomized maze zone and the Lift Lobby. The robot is to leave the start zone to enter the maze zone. In the maze zone, the robot is to map out the maze and find the exit of the maze. The robot will then enter the lift lobby. 
 
-At the lift lobby, there are 2 lift doors. The robot is to make an HTTP call to a web server. The Webserver will then reply with a "Success" and the ID of the door that will open. The robot is allowed to make 2 calls before receiving an HTTP error and the server will respond with a “error”. The server will timeout for 120 seconds. Both doors will remain locked during the timeout. 
+At the lift lobby, there are 2 lift doors. The robot is to make an HTTP call to a web server. The Webserver will then reply with a "Success" and the ID of the door that will open. The lift door will remain open for 60 seconds. The server will not respond to HTTP calls during this 60 second. The robot can make another HTTP call after this 60 second to attempt to open a door. 
+If a failure error is encountered, the robot can attempt to make another call until a "Success" is received.
+
+The door is a simple hinge door without any automatic actuation. The robot must push the door to open the door. 
 
 Once the robot enters the lift, the robot is to find the target bucket and fire 5 ping pong balls into the bucket. The mission timing will end once the ping pong balls have been fired.
 
@@ -36,8 +39,8 @@ The TA may catch and power off the robot if necessary to prevent any damage or c
 The team may declare an official stop and re-attempt the mission for multiple tries within the time limit. 
 During the missions, the TA will constantly fill the scoring form (in appendix 1, one for each mission). When he is finishes filling in the form after each mission, the team will have two possibilities:
 
-‐ 	The team agrees with the final score and signs the form. 
-‐ 	The team disagrees with the final score or want to do a re‐attempt to obtain a better score. If so, the team will have access to the arena to adjust the robot, dispenser and make modifications to the software. The team must inform the TA if there they make any major changes. When the members are ready and leave the arena, the team will declare a fresh start to the mission. The team can have as many attempts as they want for each mission.
+-  The team agrees with the final score and signs the form. 
+-  The team disagrees with the final score or want to do a re‐attempt to obtain a better score. If so, the team will have access to the arena to adjust the robot, dispenser and make modifications to the software. The team must inform the TA if there they make any major changes. When the members are ready and leave the arena, the team will declare a fresh start to the mission. The team can have as many attempts as they want for each mission.
 
 ### 3. End Phase
 At the end of the 25 minutes, the current mission will stop immediately. The TA will stop filling in the Scoring Form and calculate the score for that attempt. This score will be automatically validated for this mission. 
@@ -79,7 +82,7 @@ You are free to experiment and test any system that can complete the mission.
 The robot platform must be a Turtlebot 3 Burger. No other requirement for the robot. 
 
 ## The Markers
-The team is allowed to place temporary markers or beacons in the map to help the robot complete the mission. These markers must be installed and removed within the 25-minute time that the team have for the mission. There is no additional time given for removal of map markers.
+The team is allowed to place temporary markers or beacons in the map to help the robot complete the mission. These markers must be installed and removed within the 25-minute time that the team have for the mission. There is no additional time given for removal of map markers. All markers must not leave a mark/stain/damage on any map element. 
 
 
 
