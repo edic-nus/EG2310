@@ -40,7 +40,7 @@ The team may declare an official stop and re-attempt the mission for multiple tr
 During the missions, the TA will constantly fill the scoring form (in appendix 1, one for each mission). When he is finishes filling in the form after each mission, the team will have two possibilities:
 
 -  The team agrees with the final score and signs the form. 
--  The team disagrees with the final score or want to do a re‐attempt to obtain a better score. If so, the team will have access to the arena to adjust the robot, dispenser and make modifications to the software. The team must inform the TA if there they make any major changes. When the members are ready and leave the arena, the team will declare a fresh start to the mission. The team can have as many attempts as they want for each mission.
+-  The team disagrees with the final score or want to do a re‐attempt to obtain a better score. If so, the team will have access to the arena to adjust the robot, markers and make modifications to the software. The team must inform the TA if there they make any major changes. When the members are ready and leave the arena, the team will declare a fresh start to the mission. The team can have as many attempts as they want for each mission.
 
 ### 3. End Phase
 At the end of the 25 minutes, the current mission will stop immediately. The TA will stop filling in the Scoring Form and calculate the score for that attempt. This score will be automatically validated for this mission. 
