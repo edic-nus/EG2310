@@ -45,4 +45,7 @@ After concurrence from the panel on the presented design, the team can proceed t
 
 If the team fails the PDR, a re-PDR shall be arranged in week 8. 
 
+## PDR Grades
+PDR shall be 5% of Final score. Similar to G1, there is no detailed breakdown. Lets focus on the process.
 
+All the best everyone!
