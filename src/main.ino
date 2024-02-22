@@ -9,9 +9,6 @@ const char* password = "";
 // Create a web server on port 80
 WebServer server(80);
 
-// timeout variable
-int successfulRequestCount = 0;
-
 // Assign output variables to GPIO pins
 const int output16 = 16;
 const int output17 = 17;
@@ -41,16 +38,6 @@ void handleRequest() {
 
   // Check the action value
   if (action == "openDoor") {
-    
-    // Reject request if too many http requests are sent at once
-    if (successfulRequestCount >= 2) {
-      server.send(400, "application/json", "{\n\t\"status\":\"error\",\n\t\"message\":\"Too many requests, try again later\"\n}\n");
-      delay(20000);   // delay for 20 seconds
-      successfulRequestCount = 0;
-      return;
-    }
-
-    successfulRequestCount += 1;
 
     // Randomly decide which door to open
     String doorToOpen = random(1, 3) == 1 ? "door1" : "door2";
@@ -63,6 +50,10 @@ void handleRequest() {
     server.send(200, "application/json", response);
 
     Serial.println("Command received to open " + doorToOpen);
+
+    // set 60s delay after request
+    delay(60000);
+
   } else {
     server.send(400, "application/json", "{\n\t\"status\":\"error\",\n\t\"data\":{\n\t\t\"message\":\"Invalid Action\"\n\t}\n}\n");
   }
