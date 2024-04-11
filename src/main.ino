@@ -10,17 +10,24 @@ const char* password = "";
 WebServer server(80);
 
 // Assign output variables to GPIO pins
-const int output16 = 16;
-const int output17 = 17;
+const int pinDoor1 = 16;
+const int pinDoor2 = 17;
 
 void handleOpenDoor(String doorToOpen) {
+  // Normally Closed configuration, send HIGH signal to let current flow
   if (doorToOpen == "door1") {
-    digitalWrite(output16, HIGH);
-    digitalWrite(output17, LOW);
+    digitalWrite(pinDoor1, HIGH);
+    digitalWrite(pinDoor2, LOW);
   } else {
-    digitalWrite(output16, LOW);
-    digitalWrite(output17, HIGH);
+    digitalWrite(pinDoor1, LOW);
+    digitalWrite(pinDoor2, HIGH);
   }
+}
+
+void handleCloseDoor() {
+  // Normally Closed configuration, send LOW signal to stop current flow
+  digitalWrite(pinDoor1, LOW);
+  digitalWrite(pinDoor2, LOW);
 }
 
 void handleRequest() {
@@ -54,6 +61,9 @@ void handleRequest() {
     // set 60s delay after request
     delay(60000);
 
+    // close the door
+    handleCloseDoor();
+
   } else {
     server.send(400, "application/json", "{\n\t\"status\":\"error\",\n\t\"data\":{\n\t\t\"message\":\"Invalid Action\"\n\t}\n}\n");
   }
@@ -63,11 +73,13 @@ void setup() {
   Serial.begin(115200);
 
   // Initialize the output variables as outputs
-  pinMode(output16, OUTPUT);
-  pinMode(output17, OUTPUT);
+  pinMode(pinDoor1, OUTPUT);
+  pinMode(pinDoor2, OUTPUT);
+
+  // Normally closed (NC): The circuit is complete when the switch is not operated.
   // Set outputs to LOW
-  digitalWrite(output16, LOW);
-  digitalWrite(output17, LOW);
+  digitalWrite(pinDoor1, LOW);
+  digitalWrite(pinDoor2, LOW);
 
   Serial.println(ssid);
 
