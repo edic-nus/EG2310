@@ -102,10 +102,14 @@ b. The robot moves off the start line
 At the 14th minute mark (6 minute before the end of booking slot), the team can now choose to forfeit on the competitive scoring component. You can then start the mission from the lift lobby, and score partial points for 
 
 Robot successfully make HTTP call to open door 
+
 Robot enters correct lift 
+
 Robot correctly identify bucket and attempt to fire 
+
 Ping Pong ball successfully landed into bucket. 2 Points per ball in the bucket at the end of mission.
- An updated scoring sheet with this "white flag" scenario will be uploaded on github.
+
+An updated scoring sheet with this "white flag" scenario will be uploaded on github.
 
 6. NEW - Line following for maze solving not accepted
 100% Line-following fully closed Rviz map will not be accepted for competitive scoring. This decision is made as these map are considered human-solved and not autonomously developed. This apply to any other human-solved solution for "Mapping completion time" competitive scoring.
