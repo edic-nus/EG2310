@@ -85,7 +85,31 @@ The robot platform must be a Turtlebot 3 Burger. No other requirement for the ro
 The team is allowed to place temporary markers or beacons in the map to help the robot complete the mission. These markers must be installed and removed within the 25-minute time that the team have for the mission. There is no additional time given for removal of map markers. All markers must not leave a mark/stain/damage on any map element. 
 
 
+##ADDENDUM 1
+Mission Rules Update
 
+1. All members of the team, except for ONE designated operator must be behind the checking table for the mission time to start.
+
+2. The mission time will start if 
+a. The robot operator request that we start the time
+b. The robot moves off the start line
+
+3. The mission will end if any part of the system or terminal is interrupted by anyone for any reason. This include TA catching the bot to prevent damage to the bot or the maze. The team can then bring the robot back to the start line to restart the mission
+
+4. You must screen record the RVIZ map for submission regardless if you are aiming for map completion. 
+
+5. NEW - Forfeit competitive scoring
+At the 14th minute mark (6 minute before the end of booking slot), the team can now choose to forfeit on the competitive scoring component. You can then start the mission from the lift lobby, and score partial points for 
+
+Robot successfully make HTTP call to open door 
+Robot enters correct lift 
+Robot correctly identify bucket and attempt to fire 
+Ping Pong ball successfully landed into bucket. 2 Points per ball in the bucket at the end of mission.
+ An updated scoring sheet with this "white flag" scenario will be uploaded on github.
+
+6. NEW - Line following for maze solving not accepted
+100% Line-following fully closed Rviz map will not be accepted for competitive scoring. This decision is made as these map are considered human-solved and not autonomously developed. This apply to any other human-solved solution for "Mapping completion time" competitive scoring.
+It is acceptable for the robot to update the map while following a "marker" to the lift or during the mission. The system must then autonomously seek for the unmapped area and complete the map. 
 --End--
 
 
