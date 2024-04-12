@@ -85,7 +85,7 @@ The robot platform must be a Turtlebot 3 Burger. No other requirement for the ro
 The team is allowed to place temporary markers or beacons in the map to help the robot complete the mission. These markers must be installed and removed within the 25-minute time that the team have for the mission. There is no additional time given for removal of map markers. All markers must not leave a mark/stain/damage on any map element. 
 
 
-##ADDENDUM 1
+## ADDENDUM 1
 Mission Rules Update
 
 1. All members of the team, except for ONE designated operator must be behind the checking table for the mission time to start.
