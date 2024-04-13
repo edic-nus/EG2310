@@ -102,10 +102,10 @@ b. The robot moves off the start line
 
 At the 14th minute mark (6 minute before the end of booking slot), the team can now choose to forfeit on the competitive scoring component. You can then start the mission from the lift lobby, and score partial points for 
 
--Robot successfully make HTTP call to open door 
--Robot enters correct lift 
--Robot correctly identify bucket and attempt to fire 
--Ping Pong ball successfully landed into bucket. 2 Points per ball in the bucket at the end of mission.
+- Robot successfully make HTTP call to open door 
+- Robot enters correct lift 
+- Robot correctly identify bucket and attempt to fire 
+- Ping Pong ball successfully landed into bucket. 2 Points per ball in the bucket at the end of mission.
 
 An updated scoring sheet with this "white flag" scenario will be uploaded on github.
 
