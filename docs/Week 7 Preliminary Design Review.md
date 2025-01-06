@@ -1,8 +1,8 @@
-# EG2310 Week 7 Preliminary Design Review (PDR)
+# CDE2310 Week 7 Preliminary Design Review (PDR)
 Each team will be assigned 20 minutes to present a PDR to the panel. The PDR shall detail the plan to execute the mission, and a high level technical brefing enough for the panel to concur that the proposed design is sound and feasible. 
 
 ## Presentation Format
-The presentation shall take place in Studio 2 during the Tuesday, Wednesday and Thursday of Week 7 AY23/24. 
+The presentation shall take place in Studio 2 during the Tuesday, Wednesday and Thursday of Week 7 AY24/25. 
 Teams are allocated 20 minutes, which is broken down to 8 minutes presentation + 12 mins Q&A from the teaching team. 
 
 ### PDR Content
