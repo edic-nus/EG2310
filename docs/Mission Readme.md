@@ -12,7 +12,7 @@ Due to the mission theme, line following navigation is forbidden henceforth. Eac
 There will be a 3rd survivor zone featuring a ramp but it is not mission critical. Scaling a ramp using a 2-D lidar on a turtlebot is extremely challenging but bonus points will be awarded for successful completion of this added mission objective. Confident groups can attempt this after satisfying the basic objectives. The ramp will always be in a known area of the search and rescue disaster zone (e.g. 1 of the top 4 corners of maze) and ramp elevation specs (e.g. height, ramp travel distance, etc.) will also be made known by week 7.
 
 ## The Steps
-The final examination will be divided into 3 periods, a Setup Period to install the equipment, the mission and an end Phase to clean the arena. The team will have exactly 25 minutes to set up the materials, complete the examination and leave the area. 
+The final examination will be divided into 3 periods, a Setup Period to install the equipment, the mission and an end Phase to clean the arena. The team will have exactly 25 minutes to set up the materials, complete the examination and leave (including cleanup) the area. 
 
 ###	1. THE SETUP PERIOD 
 During the Setup Period, the team is to: 
@@ -83,7 +83,7 @@ No timing is recorded if milestones are not achieved.
 You are free to experiment and test any system or path planning algorithms that can complete the mission.
 
 ## The Robot
-The robot platform must be a Turtlebot 3 Burger. No other requirement for the robot. 
+The robot platform must be a Turtlebot 3 Burger and infra-red (IR) sensors should be for thermal sources. No other requirement for the robot. 
 
 ## The Markers
 The team is allowed to place temporary markers or beacons in the map to help the robot complete the mission. These markers must be installed and removed within the 25-minute time that the team have for the mission. There is no additional time given for removal of map markers. All markers must not leave a mark/stain/damage on any map element. 
@@ -114,6 +114,11 @@ At the 14th minute mark (6 minute before the end of booking slot), the team can 
 An updated scoring sheet with this "white flag" scenario will be uploaded on github.
 
 6. NEW - Line following for maze solving not accepted
+
+100% Line-following fully closed Rviz map will not be accepted for competitive scoring. This decision is made as these map are considered human-solved and not autonomously developed. This apply to any other human-solved solution for "Mapping completion time" competitive scoring.
+It is acceptable for the robot to update the map while following a "marker" to the survivor zone or during the mission. The system must then autonomously seek for the unmapped area and complete the map. 
+
+7. NEW - Line following for maze solving not accepted
 
 100% Line-following fully closed Rviz map will not be accepted for competitive scoring. This decision is made as these map are considered human-solved and not autonomously developed. This apply to any other human-solved solution for "Mapping completion time" competitive scoring.
 It is acceptable for the robot to update the map while following a "marker" to the survivor zone or during the mission. The system must then autonomously seek for the unmapped area and complete the map. 
