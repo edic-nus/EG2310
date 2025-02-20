@@ -3,7 +3,7 @@ Each team will be assigned 20 minutes to present a PDR to the panel. The PDR sha
 
 ## Presentation Format
 The presentation shall take place in Studio 2 during the Tuesday and Thursday of Week 7 AY24/25. Presentation slots will be assigned in G2 session. G1-6 -> Tues, G7-13 -> Thurs.
-Teams are allocated 30 minutes, which is broken down to 20 minutes presentation + 10 mins Q&A from the teaching team. 
+Teams are allocated 30 minutes, which is broken down to 15 minutes presentation + 10 mins Q&A from the teaching team. 
 
 ### PDR Content
 Given time constrain and limitations, teams can skip introduction and regurgitation of the mission document with the assumption that the panel is well aware of the team's profile and mission document.
