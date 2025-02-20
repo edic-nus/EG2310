@@ -1,5 +1,5 @@
 # CDE2310 Week 7 Preliminary Design Review (PDR)
-Each team will be assigned 20 minutes to present a PDR to the panel. The PDR shall detail the plan to execute the mission, and a high level technical brefing enough for the panel to concur that the proposed design is sound and feasible. 
+Each team will be assigned 15 minutes to present a PDR to the panel. The PDR shall detail the plan to execute the mission, and a high level technical brefing enough for the panel to concur that the proposed design is sound and feasible. 
 
 ## Presentation Format
 The presentation shall take place in Studio 2 during the Tuesday and Thursday of Week 7 AY24/25. Presentation slots will be assigned in G2 session. G1-6 -> Tues, G7-13 -> Thurs.
